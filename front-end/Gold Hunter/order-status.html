@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gold Hunter</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="yandex-tableau-widget" href="img/favicon/manifest.json">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="libs/font-awesome/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <div class="safe-container">
+        <nav class="navbar navbar-expand-md nav-container">
+            <a class="navbar-brand" href="/" title="Gold Hunter"><span>GH</span>GOLD HUNTER</a>
+
+            <div class="hamburger"></div>
+            <button class="button hamburger__button js-menu__toggle">
+                <span class="hamburger__label">Open menu</span>
+            </button>
+
+            <div class="navbar-collapse nav-center list menu" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/comment">Отзывы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/guarantee">Гарантии</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contractor">Поставщикам</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/faq">Faq</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+<article>
+    <div class="safe-container article-container">
+        <main class="orders-main">
+            <div class="order_status-group-container">
+                <h1>Статус заказа #123</h1>
+
+                <div class="content-container order_status-container order_status-container-1">
+
+                    <div class="order_status-container-circle">
+                        <div class="order_status-circle">
+                            <img src="img/order_icons/svg/order-accepted.svg" alt="Принят">
+                        </div>
+                        <span>Принят</span>
+                    </div>
+
+                    <div class="order_status-line order_status-active"></div>
+
+                    <div class="order_status-container-circle">
+                        <div class="order_status-circle">
+                            <img src="img/order_icons/svg/processing.svg" alt="Обрабатывается">
+                        </div>
+                        <span class="circle-special">Оператор готов к обмену</span>
+                    </div>
+
+                    <div class="order_status-line line-special"></div>
+
+                    <div class="order_status-container-circle">
+                        <div class="order_status-circle">
+                            <img src="img/order_icons/svg/completed.svg" alt="Выполнен">
+                        </div>
+                        <span>Выполнен</span>
+                    </div>
+
+                </div>
+
+                <div class="content-container order_status-container order_status-container-2">
+                    <div class="order_status-row">
+                        <div class="order_info-item">
+                            <p>Ник персонажа</p>
+                            <span>Fopix123</span>
+                        </div>
+                        <div class="order_info-item">
+                            <p>Сервер</p>
+                            <span>Глобальный</span>
+                        </div>
+                        <div class="order_info-item">
+                            <p>Количество</p>
+                            <span>4 кк</span>
+                        </div>
+                        <div class="order_info-item">
+                            <p>Способ доставки</p>
+                            <span>Thetfort в банке на ступеньках</span>
+                        </div>
+                    </div>
+
+                    <div class="order_status-row">
+                        <div class="order_status-info">
+                            <span id="order-question-1">Через сколько я получу свой заказ?</span>
+                            <p id="question-o-1">
+                                Как правило заказ выполняется в течении 15 - 60 минут после оплаты. Если золото не пришло
+                                вам в течение часа, значит нам понадобилось чуть больше времени. Вам придёт уведомление
+                                на почту как только мы будем готовы выполнить заказ. Вам нет необходимости самому искать
+                                оператора или ждать 24 часа в сутки.
+                            </p>
+
+                            <span id="order-question-2">Что делать если заказ долго не выполняется?</span>
+                            <p id="question-o-2">
+                                Если заказ не выполнен в течении 24 часов, обратитесь в поддержу через один из менеджеров
+                                и укажите свой номер заказа, мы быстро поможем вам.
+                            </p>
+
+                            <span>Пожалуйста сохраните ссылку этой странице до момента выполнения заказа!</span>
+
+                            <span>Пожалуйста подтвердите заказ как только он будет выполнен, это очень важно!</span>
+                        </div>
+
+                        <div class="order_status-btn-group">
+                            <a class="buttons order_status-btn btn-deactive" id="btnReady">Готов к обмену</a>
+                            <a class="buttons order_status-btn btn-deactive" id="btnCompleted">Подтвердить выполнение заказа</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-container order_status-container order_status-container-3">
+                    <h3>Как я получу свой заказ?</h3>
+                    <p>
+                        Заказ передаётся через обмен в игре. В момент когда мы будем готовы передать заказ, Вам необходимо быть в городе Thetfort в банке на
+                        ступеньках, и ждать когда наш оператор передаст вам заказ.
+                    </p>
+                </div>
+
+                <div class="content-container order_status-container order_status-container-4">
+                    <h3>Пожалуйста оставьте отзыв о проделанной работе, для нас это очень важно!</h3>
+
+                    <form method="post" action="" autocomplete="off">
+                        <div class="order_status-reviews-row">
+                            <label for="name"></label>
+                            <input type="text" id="name" required="required" placeholder="Ваше имя">
+                            <div class="rating-area">
+                                <input type="radio" id="star-5" name="rating" value="5" required="required">
+                                <label for="star-5" title="Оценка «5»"></label>
+                                <input type="radio" id="star-4" name="rating" value="4" required="required">
+                                <label for="star-4" title="Оценка «4»"></label>
+                                <input type="radio" id="star-3" name="rating" value="3" required="required">
+                                <label for="star-3" title="Оценка «3»"></label>
+                                <input type="radio" id="star-2" name="rating" value="2" required="required">
+                                <label for="star-2" title="Оценка «2»"></label>
+                                <input type="radio" id="star-1" name="rating" value="1" required="required">
+                                <label for="star-1" title="Оценка «1»"></label>
+                            </div>
+                        </div>
+                        <div class="order_status-reviews-row">
+                            <label for="review"></label>
+                            <input type="text" id="message" required="required" placeholder="Ваш отзыв">
+                        </div>
+                        <div class="order_status-reviews-row">
+                            <input class="buttons order_status-btn" type="submit" value="Отправить">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+</article>
+<footer>
+    <div class="safe-container">
+        <div class="footer-container">
+            <div class="col-container">
+                <div class="footer-container--item">
+                    <h5>Меню</h5>
+                    <ul>
+                        <li><a href="#"><span class="fa fa-angle-right"></span> Главная</a></li>
+                        <li><a href="#"><span class="fa fa-angle-right"></span> Отзывы</a></li>
+                        <li><a href="#"><span class="fa fa-angle-right"></span> Гарантии</a></li>
+                        <li><a href="#"><span class="fa fa-angle-right"></span> Поставщикам</a></li>
+                        <li><a href="#"><span class="fa fa-angle-right"></span> Faq</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-container">
+                <div class="footer-container--item">
+                    <h5>Контакты</h5>
+                    <ul>
+                        <li><a href="#"><span class="fa fa-angle-right"></span> Группа вк</a></li>
+                        <li><a href="#"><span class="fa fa-angle-right"></span> Telegram</a></li>
+                        <li><a href="#"><span class="fa fa-angle-right"></span> info@goldhunter.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-container">
+                <div class="footer-container--item">
+                    <a class="navbar-brand footer-brand" href="/" title="Gold Hunter"><span>GH</span>GOLD HUNTER</a>
+                    <p>
+                        Магазин, в котором есть все необходимое для того,
+                        чтобы ваша игра стала комфортной и результативной.
+                        Мы, как никто другой, знаем, чего хочет игрок и как
+                        ему это получить максимально безопасно и выгодно.
+                    </p>
+                </div>
+            </div>
+            <div class="col-container">
+                <div class="footer-container--item">
+                    <h5>Способы оплаты</h5>
+                    <div class="payments">
+                        <div class="payments-col--1">
+                            <img src="img/payments/qiwi.png" alt="qiwi" title="qiwi">
+                            <img src="img/payments/webmoney-white.png" alt="webmoney" title="webmoney">
+                            <img src="img/payments/mastercard.png" alt="mastercard" title="mastercard">
+                        </div>
+                        <div class="payments-col--2">
+                            <img src="img/payments/yandexmoney.png" alt="yandex money" title="yandex money">
+                            <img src="img/payments/visa.png" alt="visa" title="visa">
+                            <img src="img/payments/maestro.png" alt="maestro" title="maestro">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="modal-bg">
+    <div>
+        <div class="content-container modal-container">
+            <div class="modal-header">
+                <h3>Подтверждение</h3>
+                <i class="fa fa-times btn-close" id="btnClose"></i>
+            </div>
+            <div class="modal-body">
+                <p>Вы уверенны, что хотите это сделать? Данное действие невозможно будет отменить</p>
+            </div>
+            <div class="modal-footer">
+                <a href="/test1" class="buttons modal-btn" id="btnContinue1">Продолжить</a>
+                <a href="/test2" class="buttons modal-btn" id="btnContinue2">Продолжить</a>
+                <a class="buttons modal-btn btn-close">Отменить</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="libs/jquery/jquery-3.6.0.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

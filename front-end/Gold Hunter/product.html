@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gold Hunter</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="yandex-tableau-widget" href="img/favicon/manifest.json">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+	
+    <link rel="stylesheet" href="libs/font-awesome/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <div class="safe-container">
+        <nav class="navbar navbar-expand-md nav-container">
+            <a class="navbar-brand" href="/" title="Gold Hunter"><span>GH</span>GOLD HUNTER</a>
+
+            <div class="hamburger"></div>
+            <button class="button hamburger__button js-menu__toggle">
+                <span class="hamburger__label">Open menu</span>
+            </button>
+
+            <div class="navbar-collapse nav-center list menu" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reviews.html">Отзывы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="guarantee.html">Гарантии</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contractor.html">Поставщикам</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html">Faq</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+<article>
+    <div class="safe-container">
+        <div class="notification-container">
+            <span><img src="img/exclamation-circle.svg" alt="exclamation-circle">У нас нету окна чата, так как весь процесс автоматизирован и всегда есть валюта!</span>
+        </div>
+    </div>
+    <div class="safe-container article-container">
+        <aside>
+            <ul class="game-list">
+                <li class="content-container game-item"><a href="#">Game</a></li>
+                <li class="content-container game-item"><a href="#">Game</a></li>
+                <li class="content-container game-item"><a href="#">Game</a></li>
+                <li class="content-container game-item"><a href="#">Game</a></li>
+                <li class="content-container game-item"><a href="#">Game</a></li>
+                <li class="content-container game-item"><a href="#">Game</a></li>
+                <li class="content-container game-item"><a href="#">Game</a></li>
+                <li class="content-container game-item"><a href="#">The Elder Scrolls Online</a></li>
+                <li class="content-container game-item"><a href="#">Game</a></li>
+                <li class="content-container game-item"><a href="#">World of Warcraft Classic</a></li>
+                <li class="content-container game-item"><a href="#">Game</a></li>
+                <li class="content-container game-item"><a href="#">WoW Classic Burning Crusade</a></li>
+                <li class="content-container game-item"><a href="#">Game</a></li>
+                <li class="content-container game-item"><a href="#">Game</a></li>
+                <li class="content-container game-item"><a href="#">Game</a></li>
+                <li class="content-container game-item"><a href="#">Game</a></li>
+                <li class="content-container game-item"><a href="#">Game</a></li>
+                <li class="content-container game-item"><a href="#">Game</a></li>
+                <li class="content-container game-item"><a href="#">Game</a></li>
+                <li class="content-container game-item"><a href="#">Game</a></li>
+                <li class="content-container game-item"><a href="#">Game</a></li>
+                <li class="content-container game-item"><a href="#">Game</a></li>
+                <li class="content-container game-item"><a href="#">Game</a></li>
+                <li class="content-container game-item"><a href="#">Game</a></li>
+                <li class="content-container game-item" id="game-list-btn"><a>Развернуть</a></li>
+            </ul>
+        </aside>
+        <main>
+            <h1>Серебро Albion Online</h1>
+            <div class="content-container product-container">
+                <form method="post" action="" autocomplete="off">
+                    <div class="product-row">
+                        <div class="input-block">
+                            <label for="server">Сервер</label>
+                            <select name="server" id="server">
+                                <option data-price="56">Глобальный</option>
+                                <option data-price="110">Тестовый</option>
+                            </select>
+                        </div>
+                        <div class="input-block">
+                            <label for="paymentMethod">Способ оплаты</label>
+                            <select name="paymentMethod" id="paymentMethod">
+                                <option data-commission="2">Visa / Mastercard</option>
+                                <option data-commission="0.8">Webmoney</option>
+                                <option data-commission="2">Qiwi</option>
+                                <option data-commission="0.5">Юmoney</option>
+                                <option data-commission="2.5">Payeer</option>
+                            </select>
+                        </div>
+                        <div class="input-block">
+                            <label for="delivery">Способ доставки</label>
+                            <select name="delivery" id="delivery">
+                                <option>Обмен в банке Thetford</option>
+                                <option>Обмен в банке Fort Sterling</option>
+                                <option>Обмен в банке Lymhurst</option>
+                                <option>Обмен в банке Bridgewatch</option>
+                                <option>Обмен в банке Martlock</option>
+                                <option>Обмен в банке Caerleon</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="product-row">
+                        <div class="input-block">
+                            <label for="payment">Я оплачу</label>
+                            <input type="number" id="payment" required="required" placeholder="Сумма" min="0" step="any">
+                            <label class="product-label--sub" for="payment">С комиссией: <span id="commission">0.00</span> руб.</label>
+                        </div>
+                        <div class="input-block">
+                            <label for="amount">Я получу</label>
+                            <input type="number" id="amount" required="required" placeholder="Количество" min="0" step="any">
+                            <label class="product-label--sub" for="payment">С надбавками: <span id="allowances">0.00</span> кк</label>
+                        </div>
+                        <div class="input-block">
+                            <label for="nickname">Ник вашего персонажа</label>
+                            <input type="text" id="nickname" required="required" placeholder="Никнейм">
+                        </div>
+                    </div>
+                    <div class="product-row">
+                        <div class="input-block">
+                            <label for="email">Ваша почта</label>
+                            <input type="email" id="email" required="required" placeholder="Email" pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$">
+                        </div>
+                        <div class="input-block">
+                            <input class="buttons product-btn" type="submit" value="Оформить заказ">
+                        </div>
+                        <div class="input-block product-faq">
+                            <span id="product-question-1">Как я получу свой заказ?</span>
+                            <p id="question-p-1">
+                                Заказ передаётся через обмен в игре.
+                            </p>
+                            <span id="product-question-2">Какие риски?</span>
+                            <p id="question-p-2">
+                                Наша работа заключается в том чтобы свести риски к
+                                нулю, мы постоянно улучшаем методы передачи валюты
+                                что бы обезопасить наших клиентов. Но так как правила
+                                запрещают покупку игровых ценностей, всегда есть шанс
+                                быть наказанным Приобретая игровые ценности, Вы
+                                полностью несете ответственность за риски.
+                            </p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="content-container product-container">
+                <h3>Сервера и цены</h3>
+                <table class="product-table">
+                    <thead>
+                    <tr>
+                        <th>Сервер</th>
+                        <th>от 0 руб.</th>
+                        <th>от 500 руб.</th>
+                        <th>от 1000 руб.</th>
+                        <th>от 1500 руб.</th>
+                        <th>от 2500 руб.</th>
+                        <th>от 4000 руб.</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Глобальный</td>
+                        <td>56.00 руб.</td>
+                        <td>55.44 руб.</td>
+                        <td>54.88 руб.</td>
+                        <td>54.32 руб.</td>
+                        <td>53.20 руб.</td>
+                        <td>52.36 руб.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Глобальный</td>
+                        <td>56.00 руб.</td>
+                        <td>55.44 руб.</td>
+                        <td>54.88 руб.</td>
+                        <td>54.32 руб.</td>
+                        <td>53.20 руб.</td>
+                        <td>51.30 руб.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Глобальный</td>
+                        <td>56.00 руб.</td>
+                        <td>55.44 руб.</td>
+                        <td>54.88 руб.</td>
+                        <td>54.32 руб.</td>
+                        <td>53.20 руб.</td>
+                        <td>51.30 руб.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Глобальный</td>
+                        <td>56.00 руб.</td>
+                        <td>55.44 руб.</td>
+                        <td>54.88 руб.</td>
+                        <td>54.32 руб.</td>
+                        <td>53.20 руб.</td>
+                        <td>51.30 руб.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Глобальный</td>
+                        <td>56.00 руб.</td>
+                        <td>55.44 руб.</td>
+                        <td>54.88 руб.</td>
+                        <td>54.32 руб.</td>
+                        <td>53.20 руб.</td>
+                        <td>51.30 руб.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Глобальный</td>
+                        <td>56.00 руб.</td>
+                        <td>55.44 руб.</td>
+                        <td>54.88 руб.</td>
+                        <td>54.32 руб.</td>
+                        <td>53.20 руб.</td>
+                        <td>51.30 руб.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Глобальный</td>
+                        <td>56.00 руб.</td>
+                        <td>55.44 руб.</td>
+                        <td>54.88 руб.</td>
+                        <td>54.32 руб.</td>
+                        <td>53.20 руб.</td>
+                        <td>51.30 руб.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Глобальный</td>
+                        <td>56.00 руб.</td>
+                        <td>55.44 руб.</td>
+                        <td>54.88 руб.</td>
+                        <td>54.32 руб.</td>
+                        <td>53.20 руб.</td>
+                        <td>51.30 руб.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Глобальный</td>
+                        <td>56.00 руб.</td>
+                        <td>55.44 руб.</td>
+                        <td>54.88 руб.</td>
+                        <td>54.32 руб.</td>
+                        <td>53.20 руб.</td>
+                        <td>51.30 руб.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Глобальный</td>
+                        <td>56.00 руб.</td>
+                        <td>55.44 руб.</td>
+                        <td>54.88 руб.</td>
+                        <td>54.32 руб.</td>
+                        <td>53.20 руб.</td>
+                        <td>51.30 руб.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Глобальный</td>
+                        <td>56.00 руб.</td>
+                        <td>55.44 руб.</td>
+                        <td>54.88 руб.</td>
+                        <td>54.32 руб.</td>
+                        <td>53.20 руб.</td>
+                        <td>51.30 руб.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Глобальный</td>
+                        <td>56.00 руб.</td>
+                        <td>55.44 руб.</td>
+                        <td>54.88 руб.</td>
+                        <td>54.32 руб.</td>
+                        <td>53.20 руб.</td>
+                        <td>51.30 руб.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Глобальный</td>
+                        <td>56.00 руб.</td>
+                        <td>55.44 руб.</td>
+                        <td>54.88 руб.</td>
+                        <td>54.32 руб.</td>
+                        <td>53.20 руб.</td>
+                        <td>51.30 руб.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Глобальный</td>
+                        <td>56.00 руб.</td>
+                        <td>55.44 руб.</td>
+                        <td>54.88 руб.</td>
+                        <td>54.32 руб.</td>
+                        <td>53.20 руб.</td>
+                        <td>51.30 руб.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Глобальный</td>
+                        <td>56.00 руб.</td>
+                        <td>55.44 руб.</td>
+                        <td>54.88 руб.</td>
+                        <td>54.32 руб.</td>
+                        <td>53.20 руб.</td>
+                        <td>51.30 руб.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Глобальный</td>
+                        <td>56.00 руб.</td>
+                        <td>55.44 руб.</td>
+                        <td>54.88 руб.</td>
+                        <td>54.32 руб.</td>
+                        <td>53.20 руб.</td>
+                        <td>51.30 руб.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Глобальный</td>
+                        <td>56.00 руб.</td>
+                        <td>55.44 руб.</td>
+                        <td>54.88 руб.</td>
+                        <td>54.32 руб.</td>
+                        <td>53.20 руб.</td>
+                        <td>51.30 руб.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Глобальный</td>
+                        <td>56.00 руб.</td>
+                        <td>55.44 руб.</td>
+                        <td>54.88 руб.</td>
+                        <td>54.32 руб.</td>
+                        <td>53.20 руб.</td>
+                        <td>51.30 руб.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Глобальный</td>
+                        <td>56.00 руб.</td>
+                        <td>55.44 руб.</td>
+                        <td>54.88 руб.</td>
+                        <td>54.32 руб.</td>
+                        <td>53.20 руб.</td>
+                        <td>51.30 руб.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Глобальный</td>
+                        <td>56.00 руб.</td>
+                        <td>55.44 руб.</td>
+                        <td>54.88 руб.</td>
+                        <td>54.32 руб.</td>
+                        <td>53.20 руб.</td>
+                        <td>51.30 руб.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Глобальный</td>
+                        <td>56.00 руб.</td>
+                        <td>55.44 руб.</td>
+                        <td>54.88 руб.</td>
+                        <td>54.32 руб.</td>
+                        <td>53.20 руб.</td>
+                        <td>51.30 руб.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Глобальный</td>
+                        <td>56.00 руб.</td>
+                        <td>55.44 руб.</td>
+                        <td>54.88 руб.</td>
+                        <td>54.32 руб.</td>
+                        <td>53.20 руб.</td>
+                        <td>51.30 руб.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Глобальный</td>
+                        <td>56.00 руб.</td>
+                        <td>55.44 руб.</td>
+                        <td>54.88 руб.</td>
+                        <td>54.32 руб.</td>
+                        <td>53.20 руб.</td>
+                        <td>51.30 руб.</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</article>
+<footer>
+    <div class="safe-container">
+        <div class="footer-container">
+            <div class="col-container">
+                <div class="footer-container--item">
+                    <h5>Меню</h5>
+                    <ul>
+                        <li><a href="#"><span class="fa fa-angle-right"></span> Главная</a></li>
+                        <li><a href="#"><span class="fa fa-angle-right"></span> Отзывы</a></li>
+                        <li><a href="#"><span class="fa fa-angle-right"></span> Гарантии</a></li>
+                        <li><a href="#"><span class="fa fa-angle-right"></span> Поставщикам</a></li>
+                        <li><a href="#"><span class="fa fa-angle-right"></span> Faq</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-container">
+                <div class="footer-container--item">
+                    <h5>Контакты</h5>
+                    <ul>
+                        <li><a href="#"><span class="fa fa-angle-right"></span> Группа вк</a></li>
+                        <li><a href="#"><span class="fa fa-angle-right"></span> Telegram</a></li>
+                        <li><a href="#"><span class="fa fa-angle-right"></span> info@goldhunter.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-container">
+                <div class="footer-container--item">
+                    <a class="navbar-brand footer-brand" href="/" title="Gold Hunter"><span>GH</span>GOLD HUNTER</a>
+                    <p>
+                        Магазин, в котором есть все необходимое для того,
+                        чтобы ваша игра стала комфортной и результативной.
+                        Мы, как никто другой, знаем, чего хочет игрок и как
+                        ему это получить максимально безопасно и выгодно.
+                    </p>
+                </div>
+            </div>
+            <div class="col-container">
+                <div class="footer-container--item">
+                    <h5>Способы оплаты</h5>
+                    <div class="payments">
+                        <div class="payments-col--1">
+                            <img src="img/payments/qiwi.png" alt="qiwi" title="qiwi">
+                            <img src="img/payments/webmoney-white.png" alt="webmoney" title="webmoney">
+                            <img src="img/payments/mastercard.png" alt="mastercard" title="mastercard">
+                        </div>
+                        <div class="payments-col--2">
+                            <img src="img/payments/yandexmoney.png" alt="yandex money" title="yandex money">
+                            <img src="img/payments/visa.png" alt="visa" title="visa">
+                            <img src="img/payments/maestro.png" alt="maestro" title="maestro">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="libs/jquery/jquery-3.6.0.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

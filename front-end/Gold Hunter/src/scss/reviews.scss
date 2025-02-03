@@ -1,0 +1,118 @@
+@import "mixins.scss";
+@import "varibales.scss";
+
+.reviews-container {
+  min-height: 120px;
+  padding: 20px;
+  margin-left: 16px;
+  margin-bottom: 15px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.reviews-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+
+  span {
+    font-size: 16px;
+  }
+
+  .reviews-name {
+    margin-right: 15px;
+  }
+
+  .reviews-date {
+    font-size: 14px;
+    font-family: RobotoCondensed, serif;
+  }
+}
+
+.reviews-body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating-result {
+  width: 97px;
+  text-align: right;
+  white-space: nowrap;
+  margin-left: 15px;
+}
+
+.rating-result span {
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  line-height: 1;
+  color: #d2d2d2;
+}
+
+.rating-result > span:before {
+  content: '★';
+}
+
+.rating-result > span.active {
+  color: #ffdb00;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+.pagination {
+  position: absolute;
+  align-self: stretch;
+  bottom: 0;
+}
+
+ul.pagination {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+ul.pagination li {
+  display: inline;
+}
+
+ul.pagination li a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  border-radius: 5px;
+}
+
+ul.pagination li a.active {
+  background-color: $blueC;
+  color: white;
+  border-radius: 5px;
+}
+
+ul.pagination li a:hover:not(.active) {
+  transition: 0.3s;
+  background-color: #d2d2d2;
+}
+
+.pagination-mobile {
+  display: none !important;
+
+  a {
+    background-color: #d2d2d2;
+
+    &:last-child {
+      margin-left: 10px;
+    }
+
+    &:hover {
+      transition: 0.3s;
+      background-color: $blueC !important;
+      color: white;
+    }
+  }
+}

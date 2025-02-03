@@ -1,0 +1,213 @@
+@import "mixins.scss";
+@import "varibales.scss";
+
+.order_status-group-container {
+  max-width: 1070px;
+  width: 100%;
+}
+
+.order_status-container {
+  padding: 35px 9%;
+  margin-bottom: 15px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.order_status-container-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  .order_status-container-circle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: stretch;
+    text-align: center;
+
+    .circle-special {
+      position: absolute;
+      margin-top: 70px;
+    }
+  }
+
+  .order_status-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    border: 1px solid $border;
+    border-radius: 50%;
+    background: #ffee9e;
+
+    img {
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  .order_status-line {
+    max-width: 303px;
+    width: 100%;
+    background: #b3b3b3;
+    height: 8px;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+  }
+
+  .order_status-active {
+    background: #0fc61c;
+  }
+}
+
+.order_status-container-2 {
+
+  .order_status-row {
+
+    &:first-child {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 15px;
+    }
+
+    &:last-child {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .order_status-info {
+      max-width: 420px;
+      width: 100%;
+
+      span {
+        display: block;
+        margin-bottom: 15px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      p {
+        display: none;
+        margin-bottom: 10px;
+      }
+    }
+
+    .order_status-btn-group {
+      max-width: 250px;
+      width: 100%;
+    }
+
+    .order_status-btn {
+      max-width: 250px;
+      width: 100%;
+      white-space: nowrap;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 15px;
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+#order-question-1, #order-question-2, #product-question-1, #product-question-2 {
+  cursor: pointer;
+
+  &:hover {
+    color: $blueC;
+    transition: 0.3s;
+  }
+}
+
+.order_status-container-3 {
+  background-color: #fefce1;
+}
+
+.order_status-container-4 {
+
+  .order_status-reviews-row {
+    margin-bottom: 25px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    input:invalid {
+      border-bottom: 2px solid $border;
+
+      &:focus, &:hover {
+        transition: 0.3s;
+        border-bottom: 2px solid $blueC;
+      }
+    }
+
+    &:first-child {
+      display: flex;
+    }
+  }
+
+  #name {
+    max-width: 214px;
+    width: 100%;
+  }
+
+  #message {
+    width: 100%;
+  }
+
+  .order_status-btn {
+    max-width: 200px;
+    width: 100%;
+  }
+
+  .rating-area {
+    overflow: hidden;
+    min-width: 120px;
+    margin-left: 40px;
+  }
+  .rating-area:not(:checked) > input {
+    display: none;
+  }
+  .rating-area:not(:checked) > label {
+    float: right;
+    width: 24px;
+    padding: 0;
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 24px;
+    color: #d2d2d2;
+  }
+  .rating-area:not(:checked) > label:before {
+    content: '★';
+  }
+  .rating-area > input:checked ~ label {
+    color: #ffdb00;
+  }
+  .rating-area:not(:checked) > label:hover,
+  .rating-area:not(:checked) > label:hover ~ label {
+    color: #ffdb00;
+  }
+  .rating-area > input:checked + label:hover,
+  .rating-area > input:checked + label:hover ~ label,
+  .rating-area > input:checked ~ label:hover,
+  .rating-area > input:checked ~ label:hover ~ label,
+  .rating-area > label:hover ~ input:checked ~ label {
+    color: #ffdb00;
+  }
+  .rate-area > label:active {
+    position: relative;
+  }
+}
