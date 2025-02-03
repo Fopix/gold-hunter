@@ -1,0 +1,34 @@
+<div th:fragment="1" class="order_status-container-circle">
+    <div class="order_status-circle">
+        <img th:src="@{~/img/order_icons/processing.svg}" alt="Обрабатывается">
+    </div>
+    <span class="circle-special">Обрабатывается</span>
+</div>
+
+<div th:fragment="2" class="order_status-container-circle">
+    <div class="order_status-circle">
+        <img th:src="@{~/img/order_icons/trade.svg}" alt="Оператор готов к обмену">
+    </div>
+    <span class="circle-special">Оператор готов к обмену</span>
+</div>
+
+<div th:fragment="3" class="order_status-container-circle">
+    <div class="order_status-circle">
+        <img th:src="@{~/img/order_icons/trade.svg}" alt="Вы готовы к обмену">
+    </div>
+    <span class="circle-special">Вы готовы к обмену</span>
+</div>
+
+<div th:fragment="4" class="order_status-container-circle">
+    <div class="order_status-circle">
+        <img th:src="@{~/img/order_icons/completed.svg}" alt="Выполнен">
+    </div>
+    <span class="circle-special">Заказ доставлен</span>
+</div>
+
+<div th:fragment="6" class="order_status-container-circle">
+    <div class="order_status-circle">
+        <img th:src="@{~/img/order_icons/cancel.svg}" alt="Возврат">
+    </div>
+    <span class="circle-special">Возврат</span>
+</div>

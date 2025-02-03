@@ -1,0 +1,52 @@
+<div th:replace="fragments/header :: headerFragment (pageTitle='Gold Hunter - Информация о заказе',description='',keywords='')" xmlns:th="http://www.w3.org/1999/xhtml"></div>
+<article>
+    <div class="safe-container article-container">
+        <main class="orders-main" th:attr="data-status=${order.getState()}">
+            <div class="order_info-group-container">
+                <h1>Информация о заказе</h1>
+                <div class="content-container">
+                    <div class="order_info-first">
+                        <div class="order_info-item">
+                            <p>Игра</p>
+                            <span th:text="${order.getGame()}">Игра</span>
+                        </div>
+                        <div class="order_info-item">
+                            <p>Сервер</p>
+                            <span th:text="${order.getServer()}">Сервер</span>
+                        </div>
+                        <div class="order_info-item">
+                            <p>Ник</p>
+                            <span th:text="${order.getNickname()}">Ник</span>
+                        </div>
+                        <div class="order_info-item">
+                            <p>Способ доставки</p>
+                            <span th:text="${order.getDelivery()}">Способ доставки</span>
+                        </div>
+
+                        <div class="order_info-item">
+                            <p>Количество</p>
+                            <span th:text="${#numbers.formatDecimal(order.getAmount(), 1, 'WHITESPACE', 2, 'POINT') + ' ' + order.getUnit()}">Количество</span>
+                        </div>
+                        <div class="order_info-item">
+                            <p>К оплате</p>
+                            <span th:text="${#numbers.formatDecimal(order.getSum(), 1, 'WHITESPACE', 2, 'POINT') + ' руб.'}">Сумма</span>
+                        </div>
+                        <div class="order_info-item">
+                            <p>Платежная система</p>
+                            <span th:text="${order.getPaymentSystem()}">Платежная система</span>
+                        </div>
+                        <div class="order_info-item">
+                            <p>Почта</p>
+                            <span th:text="${order.getEmail()}">Почта</span>
+                        </div>
+                    </div>
+                    <div class="order_info-second">
+                        <a th:href="@{/games/{id} (id=${order.getGameId()}, k=${order.getUrl()})}" class="buttons order_info-btn">Изменить заказ</a>
+                        <a th:href="${payUrl}" class="buttons order_info-btn">Перейти к оплате</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</article>
+<div th:replace="fragments/footer"></div>

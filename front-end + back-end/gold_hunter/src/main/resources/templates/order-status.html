@@ -1,0 +1,139 @@
+<div th:replace="fragments/header :: headerFragment (pageTitle='Gold Hunter - Статус заказа #' + ${order.getId()},description='',keywords='')" xmlns:th="http://www.w3.org/1999/xhtml"></div>
+<article>
+    <div class="safe-container article-container">
+        <main class="orders-main" th:attr="data-status=${order.getState()}">
+            <div class="order_status-group-container">
+                <h1 th:text="${'Статус заказа #' + order.getId()}">Статус заказа</h1>
+
+                <div class="content-container order_status-container order_status-container-1">
+
+                    <div class="order_status-container-circle">
+                        <div class="order_status-circle">
+                            <img th:src="@{~/img/order_icons/order-accepted.svg}" alt="Принят">
+                        </div>
+                        <span>Принят</span>
+                    </div>
+
+                    <div class="order_status-line order_status-active"></div>
+
+                    <div th:replace="fragments/status-icons :: ${order.getState()}"></div>
+
+                    <div th:class="'order_status-line line-special ' + ${order.getState() == 4 ? 'order_status-active' : null}"></div>
+
+                    <div class="order_status-container-circle">
+                        <div class="order_status-circle">
+                            <img th:src="@{~/img/order_icons/completed.svg}" alt="Выполнен">
+                        </div>
+                        <span>Выполнен</span>
+                    </div>
+
+                </div>
+
+                <div class="content-container order_status-container order_status-container-2">
+                    <div class="order_status-row">
+                        <div class="order_info-item">
+                            <p>Ник персонажа</p>
+                            <span th:text="${order.getNickname()}">Ник</span>
+                        </div>
+                        <div class="order_info-item">
+                            <p>Сервер</p>
+                            <span th:text="${order.getServer()}">Сервер</span>
+                        </div>
+                        <div class="order_info-item">
+                            <p>Количество</p>
+                            <span th:text="${#numbers.formatDecimal(order.getAmount(), 1, 'WHITESPACE', 2, 'POINT') + ' ' + order.getUnit()}">Количество</span>
+                        </div>
+                        <div class="order_info-item">
+                            <p>Способ доставки</p>
+                            <span th:text="${order.getDelivery()}">Доставка</span>
+                        </div>
+                    </div>
+
+                    <div class="order_status-row">
+                        <div class="order_status-info">
+                            <span id="order-question-1">Через сколько я получу свой заказ?</span>
+                            <p id="question-o-1">
+                                Как правило, заказ выполняется в течении 10 - 60 минут после оплаты.
+                                Если игровая валюта не пришла Вам в течение часа, значит нам
+                                понадобиться чуть больше времени. Вам придёт уведомление на почту,
+                                как только мы будем готовы выполнить заказ. Вам нет необходимости
+                                самому искать оператора или ждать 24 часа в сутки.
+                            </p>
+
+                            <span id="order-question-2">Что делать если заказ долго не выполняется?</span>
+                            <p id="question-o-2">
+                                Если заказ не выполнен в течении 24 часов, обратитесь в тех. поддержу через один из мессенджеров
+                                и укажите свой номер заказа. Мы быстро поможем вам.
+                            </p>
+
+                            <span>Пожалуйста сохраните ссылку этой странице до момента выполнения заказа!</span>
+
+                            <span>Пожалуйста подтвердите заказ как только он будет выполнен, это очень важно!</span>
+                        </div>
+
+                        <div class="order_status-btn-group">
+                            <a th:if="${order.getDelivery() != 'Почта'}" th:class="'buttons order_status-btn ' + ${order.getState() == 2 ? null : 'btn-deactive'}" id="btnReady">Готов к обмену</a>
+                            <a th:class="'buttons order_status-btn ' + ${order.getState() == 3 or (order.getState() == 2 and order.getDelivery() == 'Почта') ? null : 'btn-deactive'}" id="btnCompleted">Подтвердить выполнение заказа</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-container order_status-container order_status-container-3">
+                    <h3>Как я получу свой заказ?</h3>
+                    <div th:replace="fragments/delivery-order :: ${order.getDelivery() == 'Почта' ? 'forMail' : order.getGameId()}"></div>
+                </div>
+
+                <div class="content-container order_status-container order_status-container-4">
+                    <h3>Пожалуйста оставьте отзыв о проделанной работе, для нас это очень важно!</h3>
+
+                    <form method="post" autocomplete="off">
+                        <div class="order_status-reviews-row">
+                            <label for="name"></label>
+                            <input type="text" name="name" id="name" placeholder="Ваше имя (необязательно)">
+                            <div class="rating-area">
+                                <input type="radio" id="star-5" name="rating" value="5" required="required">
+                                <label for="star-5" title="Оценка «5»"></label>
+                                <input type="radio" id="star-4" name="rating" value="4" required="required">
+                                <label for="star-4" title="Оценка «4»"></label>
+                                <input type="radio" id="star-3" name="rating" value="3" required="required">
+                                <label for="star-3" title="Оценка «3»"></label>
+                                <input type="radio" id="star-2" name="rating" value="2" required="required">
+                                <label for="star-2" title="Оценка «2»"></label>
+                                <input type="radio" id="star-1" name="rating" value="1" required="required">
+                                <label for="star-1" title="Оценка «1»"></label>
+                            </div>
+                        </div>
+                        <div class="order_status-reviews-row">
+                            <label for="message"></label>
+                            <input type="text" name="message" id="message" required="required" placeholder="Ваш отзыв">
+                        </div>
+                        <div class="order_status-reviews-row">
+                            <input class="buttons order_status-btn" type="submit" value="Отправить">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+</article>
+
+<div class="modal-bg">
+    <div>
+        <div class="content-container modal-container">
+            <div class="modal-header">
+                <h3>Подтверждение</h3>
+                <i class="fa fa-times btn-close" id="btnClose"></i>
+            </div>
+            <div class="modal-body">
+                <p>Вы уверенны, что хотите это сделать? Данное действие невозможно будет отменить</p>
+            </div>
+            <div class="modal-footer">
+                <a th:href="@{ready/{id} (id=${order.getUrl()})}" th:if="${order.getDelivery() != 'Почта'}" class="buttons modal-btn" id="btnContinue1">Продолжить</a>
+                <a th:href="@{completed/{id} (id=${order.getUrl()})}" class="buttons modal-btn" id="btnContinue2">Продолжить</a>
+                <a class="buttons modal-btn btn-close">Отменить</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div th:replace="fragments/footer"></div>

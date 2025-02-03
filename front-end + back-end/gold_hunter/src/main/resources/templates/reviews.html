@@ -1,0 +1,70 @@
+<div th:replace="fragments/header :: headerFragment (pageTitle='Gold Hunter - Отзывы',description='Отзывы наших покупателей о проделанной работе. Отзывы можно оставлять только после покупки!',keywords='магазин, отзывы, gold hunter')" xmlns:th="http://www.w3.org/1999/xhtml"></div>
+<article>
+    <div class="safe-container article-container">
+        <div th:replace="fragments/sidebar"></div>
+        <main>
+            <h1>Отзывы о нас</h1>
+            <div th:each="reviews : ${page.iterator()}" class="content-container reviews-container">
+                <div class="reviews-header">
+                    <div>
+                        <span class="reviews-name" th:text="${reviews.getName()}">name</span>
+                        <span class="reviews-game" th:text="${reviews.getGame()}">game</span>
+                    </div>
+                    <div>
+                        <span class="reviews-date" th:text="${reviews.getDate()}">date</span>
+                    </div>
+                </div>
+                <div class="reviews-body">
+                    <p th:text="${reviews.getMessage()}">text</p>
+                    <div class="rating-result">
+                        <span th:class="${reviews.getRating() >= 1 ? 'active' : null}"></span>
+                        <span th:class="${reviews.getRating() >= 2 ? 'active' : null}"></span>
+                        <span th:class="${reviews.getRating() >= 3 ? 'active' : null}"></span>
+                        <span th:class="${reviews.getRating() >= 4 ? 'active' : null}"></span>
+                        <span th:class="${reviews.getRating() >= 5 ? 'active' : null}"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pagination-container" th:if="${page.totalPages > 1}">
+                <ul class="pagination pagination-desktop">
+                    <li><a th:href="@{/reviews (page=${page.previousOrFirstPageable().getPageNumber()})}">«</a></li>
+
+                    <th:block th:if="${page.totalPages <= 7}">
+                        <li th:each="pageNumber : ${#numbers.sequence(0, page.totalPages - 1)}">
+                            <a th:href="@{/reviews (page=${pageNumber})}" th:class="${pageNumber == page.getNumber() ? 'active' : null}" th:text="${pageNumber + 1}">0</a>
+                        </li>
+                    </th:block>
+
+                    <th:block th:if="${page.totalPages > 7}">
+                        <th:block th:if="${page.getNumber() <= 5}">
+                            <li th:each="pageNumber : ${#numbers.sequence(0, 6)}">
+                                <a th:href="@{/reviews (page=${pageNumber})}" th:class="${pageNumber == page.getNumber() ? 'active' : null}" th:text="${pageNumber + 1}">0</a>
+                            </li>
+                        </th:block>
+
+                        <th:block th:if="${page.getNumber() > 5 && page.getNumber() < page.totalPages - 3}">
+                            <li th:each="pageNumber : ${#numbers.sequence(page.getNumber() - 3, page.getNumber() + 3)}">
+                                <a th:href="@{/reviews (page=${pageNumber})}" th:class="${pageNumber == page.getNumber() ? 'active' : null}" th:text="${pageNumber + 1}">0</a>
+                            </li>
+                        </th:block>
+
+                        <th:block th:if="${page.getNumber() >= page.totalPages - 3}">
+                            <li th:each="pageNumber : ${#numbers.sequence(page.totalPages - 7, page.totalPages - 1)}">
+                                <a th:href="@{/reviews (page=${pageNumber})}" th:class="${pageNumber == page.getNumber() ? 'active' : null}" th:text="${pageNumber + 1}">0</a>
+                            </li>
+                        </th:block>
+                    </th:block>
+
+                    <li><a th:href="@{/reviews (page=${page.nextOrLastPageable().getPageNumber()})}">»</a></li>
+                </ul>
+
+                <ul class="pagination pagination-mobile">
+                    <li><a th:href="@{/reviews (page=${page.previousOrFirstPageable().getPageNumber()})}">Назад</a></li>
+                    <li><a th:href="@{/reviews (page=${page.nextOrLastPageable().getPageNumber()})}">Вперёд</a></li>
+                </ul>
+            </div>
+        </main>
+    </div>
+</article>
+<div th:replace="fragments/footer"></div>

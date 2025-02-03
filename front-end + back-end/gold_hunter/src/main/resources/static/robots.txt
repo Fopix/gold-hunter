@@ -1,0 +1,22 @@
+User-agent: *
+Host: https://goldhunter.fun/
+Sitemap: https://goldhunter.fun/sitemap.xml
+
+Disallow: /orders/
+
+
+User-agent: Yandex
+Disallow: /orders/
+Disallow: *&*=
+
+Clean-param: utm /*
+Clean-param: stock /*
+Clean-param: sgtry /*
+Clean-param: h /*
+Clean-param: l /*
+Clean-param: r /*
+Clean-param: baobab_event_id /*
+Clean-param: cf_chl_captcha_tk /*
+
+User-agent: Googlebot
+Disallow: /orders/
