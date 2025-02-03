@@ -1,0 +1,63 @@
+@import "mixins.scss";
+@import "varibales.scss";
+
+.modal-bg {
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 3;
+  position: fixed;
+  display: none;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 210px 20px 20px 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.modal-container {
+  max-width: 570px;
+  padding: 15px;
+  -webkit-box-shadow: 0 0 8px 3px rgba(34, 34, 34, 0.2);
+  -moz-box-shadow: 0 0 8px 3px rgba(34, 34, 34, 0.2);
+  box-shadow: 0 0 8px 3px rgba(34, 34, 34, 0.2);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-body {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.modal-btn {
+  width: 100px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:last-child {
+    background: #d74316;
+
+    &:hover {
+      transition: 0.3s;
+      background-color: lighten(#d74316, 5%);
+    }
+  }
+}
+
+#btnClose {
+  cursor: pointer;
+  color: $text1C;
+  font-size: 21px;
+}
